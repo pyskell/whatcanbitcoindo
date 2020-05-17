@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% include "tech/lightning.html" %}
 
 {% block title %}Bites: Bitcoin tech explained simply{% endblock %}
 
@@ -7,8 +6,15 @@
 {% endblock %}
 
 {% block content %}
-<main>
+<main role="main" class="container">
+	<div id="main-body">
+		<h1>Bitcoin has the hardest tech</h1>
+		<p class="lead">It's not simple tech, it's not flashy, it's not hyped, it's tech that gets serious work done well.
+			Unfortunately this can be offputting to newcomers and often leads to the erroneous belief that Bitcoin is
+			technologically archaic, or worse has no development.</p>
 
+			{% include "tech/lightning.html" %}
+	</div>
 </main>
 {% endblock %}
 
