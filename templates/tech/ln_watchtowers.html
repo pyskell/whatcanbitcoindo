@@ -1,0 +1,32 @@
+{% extends "description.html" %}
+
+{% set id="ln-watchtowers"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Lightning" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="Watchtowers" %} {# set to False or "" if not using #}
+{% set simple_desc="Keeps your BTC secure on Lightning by monitoring the Bitcoin network" %} {# Keep this short (~50 characters) #}
+
+{% block at_a_glance %}
+"All Lightning transactions are essentially multisignature bitcoin transactions (ie. requiring a predefined number of keys to spend, rather than just one). Typically these transactions are 2-of-2 multisigs with a timelock (aka. a withdrawal delay). When you move BTC around on the Lightning Network you're essentially sharing IOUs with people. When you eventually want to turn those IOUs into BTC in your wallet you need to ""close"" your Lightning channel. There's two general ways to move BTC out of a Lightning channel:
+
+1. Holders of both keys choose to spend the BTC and agree on the final IOU in the chain of IOUs. You and the person you've sent or received money from each have one of them. Most LN transactions end this way as most parties simply obey the rules.
+
+2. The other way is when the parties disagree, in this case 1 of the 2 keys can move the BTC with a timelock (ie. a delay). One party initiates the withdrawal, then the other party can see this transaction on the Bitcoin network and respond to it, either saying it's fine (ie. they've sent the right IOU), or that it's wrong and providing proof (in the form of more recent IOUs) that they are the rightful owner of the BTC. 
+
+Watchtowers cover the second case, watching the Bitcoin network and making sure that the wrong transactions don't end up on the network sending money to the wrong people."
+{% endblock at_a_glance %}
+
+{% block status %}
+Watchtowers are already in a few wallets but they're still in alpha development
+{% endblock status %}
+
+{% block future %}
+Eventually Watchtowers will be available everywhere and making fraudulent Lightning transactions by giving the Bitcoin network old IOUs will be practically impossible.
+{% endblock future %}
+
+{% block vs_alts %}
+Currently Lightning channels are not yet easy to monitor, while the rate of fraud is low it is still feasible and does occasionally happen.
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<a href="https://wiki.ion.radar.tech/tech/research/watchtowers">Radar.tech</a>
+{% endblock further_reading %}
