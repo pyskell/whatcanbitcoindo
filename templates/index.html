@@ -6,12 +6,55 @@
 {% endblock %}
 
 {% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#">Bites</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+		aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="techdropdown" data-toggle="dropdown" aria-haspopup="true"
+			aria-expanded="false">Tech</a>
+			<div class="dropdown-menu" aria-labelledby="techdropdown">
+			<a class="dropdown-item" href="#segwit">Segwit</a>
+			<a class="dropdown-item" href="#lightning">Lightning</a>
+			<a class="dropdown-item" href="#schnorr">Schnorr</a>
+			<a class="dropdown-item" href="#taproot">Taproot</a>
+			<a class="dropdown-item" href="#miniscript">Miniscript</a>
+			<a class="dropdown-item" href="#ctv">Check Template Verify</a>
+			<a class="dropdown-item" href="#discreet">Discreet Log Contracts</a>
+			</div>
+		</li>
+		</ul>
+	</div>
+</nav>
+
 <main role="main" class="container">
 	<div id="main-body">
 		<h1>Bitcoin has the hardest tech</h1>
-		<p class="lead">It's not simple tech, it's not flashy, it's not hyped, it's tech that gets serious work done well.
-			Unfortunately this can be offputting to newcomers and often leads to the erroneous belief that Bitcoin is
-			technologically archaic, or worse has no development.</p>
+		<p class="lead">
+		Bitcoin is not flashy, nor hyped tech. Bitcion is tech that gets serious work done well. 
+		Unfortunately this approach often leads to the erroneous and often pandered belief 
+		that Bitcoin is technologically archaic, or worse has no development.
+		</p>
+		<p class="lead">
+		As a former Bitcoin newbie myself I can tell you that I spent years viewing Bitcoin as old tech, 
+		rather than as tech focused on a singular and vital goal: a native internet currency, 
+		that may one day bring to money what the Internet brought to freedom of speech.
+		</p>
+		<p class="lead">
+		Below you will find an ever-incomplete list of emerging Bitcoin tech 
+		that serves as a stepping off point for understanding the advancements 
+		and freedoms that Bitcoin may one day bring all of us.
+		</p>
+
+		{# TODO: Add more existing tech to this page #}
 
 		{% for tech in tech_list %}
 			{% include tech_list %}

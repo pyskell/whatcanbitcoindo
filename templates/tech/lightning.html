@@ -2,7 +2,7 @@
 
 {% set id="lightning"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
 {% set project="Lightning" %}
-{% set sub_project=False %}
+{% set sub_project="Test" %}
 
 {% block simple_desc %}
 A way to send Bitcoin in seconds between friends and merchants.
@@ -42,3 +42,9 @@ and then sell our data to others who really shouldn't have it.
 Lightning will make it so that only the buyer and seller know each other and no other parties have access to the transaction. 
 In that way Lightning will also work a lot like cash but on your phone.
 {% endblock vs_alts %}
+
+{% block further_reading %}
+<a href="https://wiki.ion.radar.tech/tech/lightning/lightning-network">Radar.tech</a>
+<a href="https://github.com/lightningnetwork/lightning-rfc">Lightning Technical Specifications</a>
+
+{% endblock further_reading %}

@@ -2,13 +2,7 @@
 
 
     <section id="{{id}}" data-spy="{{id}}" data-target="#{{id}}">
-        <h2>    
-            {% if subproject %}
-                {{project}}: {{subproject}}
-            {% else %}
-                {{project}}
-            {% endif %}
-        </h2>
+        <h2>{{project}}{% if sub_project %}: {{sub_project}}{% else %}{% endif %}</h2>
         <ul class="nav nav-tabs" id="{{id}}Tab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="{{id}}-simple-explainer-tab" data-toggle="tab" href="#{{id}}-simple-explainer" role="tab"
@@ -21,6 +15,10 @@
             <li class="nav-item">
                 <a class="nav-link" id="{{id}}-status-tab" data-toggle="tab" href="#{{id}}-status" role="tab" aria-controls="{{id}}-status"
                 aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="{{id}}-further-reading-tab" data-toggle="tab" href="#{{id}}-further-reading" role="tab" aria-controls="{{id}}-further-reading"
+                aria-selected="false">References</a>
             </li>
         </ul>
         <div class="tab-content" id="{{id}}TabContent">
@@ -56,6 +54,13 @@
                     {% block vs_alts %}
                     
                     {% endblock vs_alts %}
+                </p>
+            </div>
+            <div class="tab-pane fade" id="{{id}}-further-reading" role="tabpanel" aria-labelledby="{{id}}-further-reading">
+                <p>
+                    {% block further_reading %}
+                    
+                    {% endblock further_reading %}
                 </p>
             </div>
         </div>
