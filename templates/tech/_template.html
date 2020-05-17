@@ -1,16 +1,13 @@
 {% extends "description.html" %}
 
-{% block name %}
+{% set id=""%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="" %} {# set to False or "" if not using #}
+{% set simple_desc="" %} {# Keep this short (~50 characters) #}
 
-{% endblock name %}
+{% block at_a_glance %}
 
-{% block simple_desc %}
-
-{% endblock simple_desc %}
-
-{% block moderate_desc %}
-
-{% endblock moderate_desc %}
+{% endblock at_a_glance %}
 
 {% block status %}
 
@@ -24,6 +21,6 @@
 
 {% endblock vs_alts %}
 
-{% block references %}
+{% block further_reading %}
 
-{% endblock references %}
+{% endblock further_reading %}
