@@ -1,0 +1,32 @@
+{% extends "description.html" %}
+
+{% set id="ln-eltoo"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Lightning" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="Eltoo" %} {# set to False or "" if not using #}
+{% set simple_desc="Makes moving and protecting your BTC between Lightning and Bitcoin networks cheaper" %} {# Keep this short (~50 characters) #}
+
+{% block at_a_glance %}
+<p>
+Go back and read about Watchtowers first. When watchtowers need to deal with stale IOUs like in the second case 
+they may need to send a lot of them to the Bitcoin network to inform it of the final IOU in the chain. 
+This process can create large transactions which are expensive. Eltoo allows for not having to do this 
+making it much cheaper to prove the chain of IOUs to the Bitcoin network.
+<p>
+{% endblock at_a_glance %}
+
+{% block status %}
+
+{% endblock status %}
+
+{% block future %}
+
+{% endblock future %}
+
+{% block vs_alts %}
+
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<a href="https://wiki.ion.radar.tech/tech/research/eltoo">Radar.tech</a>
+<a href="https://blockstream.com/eltoo.pdf">Original Paper (Blockstream)</a>
+{% endblock further_reading %}
