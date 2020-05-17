@@ -1,0 +1,43 @@
+{% extends "description.html" %}
+
+{% set project="Lightning" %}
+{% set sub_project=False %}
+
+{% block simple_desc %}
+A way to send Bitcoin in seconds between friends and merchants.
+{% endblock simple_desc %}
+
+{% block moderate_desc %}
+A way to send Bitcoin between friends and merchants using what are known as HTLCs (Hashed Time Lock Contracts). 
+Essentially you get money on Lightning by making a specially formatted Bitcoin transaction. 
+The BTC you included in that transaction is then available to send to your friends and merchants. 
+As long as your wallet is monitoring the Bitcoin network the transactions are irreversible. 
+When Lightning is mature it will be usable for most reasonably sized transactions between friends and merchants 
+and you won't need to worry about your wallet monitoring the Bitcoin network because they all will.
+{% endblock moderate_desc %}
+
+{% block status %}
+Lightning is in alpha to beta state which means it works most of the time but may have rough edges.
+Lightning wallets continue to improve in quality by leaps and bounds 
+and tthe leading Lightning wallets are generally simple and easy to use.
+{% endblock status %}
+
+{% block future %}
+When Lightning is mature it will be usable for most reasonably sized transactions between friends and merchants 
+and you won't need to worry about your wallet monitoring the Bitcoin network because they all will. 
+Most importantly when Lightning is mature you may not even know you're using it, 
+you'll just open your wallet, click pay, and enter your friends name. Your wallet will make a smart decision
+on how to send the BTC, whether that be on Lightning, on the Bitcoin network, or on another payment system.
+{% endblock future %}
+
+{% block vs_alts %}
+Lightning is best thought of as a Bitcoin's Visa network. 
+With this in mind Lightning will enable an experience that's very much like a credit card except with lower transaction fees. 
+Most credit card payments add a 1-3% fee, many times this is hidden in the price of items you buy. 
+Saving costs is great but an even more important part of Lightning is that its design 
+and development effort is going into making sure that when you buy something no one else is storing your entire shopping history. 
+Today many companies collect our data and use it manipulate us into purchasing things we don't need 
+and then sell our data to others who really shouldn't have it. 
+Lightning will make it so that only the buyer and seller know each other and no other parties have access to the transaction. 
+In that way Lightning will also work a lot like cash but on your phone.
+{% endblock vs_alts %}

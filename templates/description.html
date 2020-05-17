@@ -1,0 +1,7 @@
+{% block description %}
+    {% if subproject %}
+        {{project}}: {{subproject}}
+    {% else %}
+        {{project}}
+    {% endif %}
+{% endblock description %}
