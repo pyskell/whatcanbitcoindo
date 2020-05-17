@@ -2,7 +2,6 @@ from flask import Flask, render_template
 import glob
 
 app = Flask(__name__)
-app.config['FREEZER_DESTINATION'] = 'docs'
 
 @app.route('/')
 def home():
