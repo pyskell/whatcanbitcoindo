@@ -13,7 +13,9 @@
 			Unfortunately this can be offputting to newcomers and often leads to the erroneous belief that Bitcoin is
 			technologically archaic, or worse has no development.</p>
 
-			{% include "tech/lightning.html" %}
+		{% for tech in tech_list %}
+			{% include tech_list %}
+		{% endfor %}
 	</div>
 </main>
 {% endblock %}
