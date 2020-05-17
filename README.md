@@ -6,3 +6,5 @@ Namely, we should:
 - Aim to use as simple language as possible and avoid idioms so that even non-native English speakers can understand Bitcoin
 - Want to avoid analogies *unless* they are close to 1-to-1 comparisons and broadly understood
 - Add more languages
+
+Run `./freeze.py` to get a static site in the `build/` directory.
