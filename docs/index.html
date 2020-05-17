@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en"> 
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bites: Bitcoin tech explained simply</title>
+    
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styling.css">
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#">Bites</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+		aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="techdropdown" data-toggle="dropdown" aria-haspopup="true"
+			aria-expanded="false">Tech</a>
+			<div class="dropdown-menu" aria-labelledby="techdropdown">
+			<a class="dropdown-item" href="#segwit">Segwit</a>
+			<a class="dropdown-item" href="#lightning">Lightning</a>
+			<a class="dropdown-item" href="#schnorr">Schnorr</a>
+			<a class="dropdown-item" href="#taproot">Taproot</a>
+			<a class="dropdown-item" href="#miniscript">Miniscript</a>
+			<a class="dropdown-item" href="#ctv">Check Template Verify</a>
+			<a class="dropdown-item" href="#discreet">Discreet Log Contracts</a>
+			</div>
+		</li>
+		</ul>
+	</div>
+</nav>
+
+<main role="main" class="container">
+	<div id="main-body">
+		<h1>Bitcoin has the hardest tech</h1>
+		<p class="lead">
+		Bitcoin is not flashy, nor hyped tech. Bitcion is tech that gets serious work done well. 
+		Unfortunately this approach often leads to the erroneous and deceptive belief 
+		that Bitcoin is technologically archaic, or worse has no development.
+		</p>
+		<p class="lead">
+		As a former Bitcoin newbie myself I can tell you that I spent years viewing Bitcoin as old tech, 
+		rather than as tech focused on a singular and vital goal: a native internet currency, 
+		that may one day bring to money what the Internet brought to freedom of speech.
+		</p>
+		<p class="lead">
+		Below you will find an ever-incomplete list of emerging Bitcoin tech 
+		that serves as a stepping off point for understanding the advancements 
+		and freedoms that Bitcoin may one day bring all of us.
+		</p>
+		<p class="lead">
+		Please also keep in mind that this is tech explained simply, as such it will gloss over specific technical details.
+		If you're excited by these things and want more in depth and accurate information then please refer to the "Further reading" tabs.
+		</p>
+
+		
+
+		<div class="tech-container">
+		
+			
+
+    <section id="lightning" data-spy="lightning" data-target="#lightning">
+        <h2>Lightning</h2>
+        <h3>A way to send Bitcoin in seconds between friends and merchants</h3>
+        <ul class="nav nav-tabs" id="lightningTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="lightning-at-a-glance-tab" data-toggle="tab" href="#lightning-at-a-glance" role="tab"
+                aria-controls="lightning-at-a-glance" aria-selected="true">At a glance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="lightning-status-tab" data-toggle="tab" href="#lightning-status" role="tab" aria-controls="lightning-status"
+                aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="lightning-further-reading-tab" data-toggle="tab" href="#lightning-further-reading" role="tab" aria-controls="lightning-further-reading"
+                aria-selected="false">Further Reading</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="lightningTabContent">
+            <div class="tab-pane fade active show" id="lightning-at-a-glance" role="tabpanel" aria-labelledby="lightning-at-a-glance">
+                <p>
+                    
+<p>
+Essentially Lightning is a faster type of Bitcoin transaction, that rather than being sent directly to the Bitcoin network
+is sent directly to friends, family, and merchants. Later they may choose to move the BTC they received to the Bitcoin network.
+</p>
+
+<p>
+When Lightning is mature it will be usable for reasonably sized transactions and purchases between friends and merchants
+while the Bitcoin network will remain the preferred method for large transactions.
+</p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="lightning-status" role="tabpanel" aria-labelledby="lightning-status">
+                <p>
+                    
+<p>
+Lightning is in alpha to beta state which means it works most of the time but may have bugs.
+Lightning wallets continuously improve in security and quality. The leading Lightning wallets are generally simple and easy to use.
+</p>
+
+<p>
+At the moment you should only use small amounts of BTC on Lightning due to risks related to the early nature of the Lightning ecosystem.
+</p>
+
+                </p>
+
+                    <p>
+                    
+<p>
+When Lightning is mature it will be usable for most reasonably sized transactions between friends and merchants 
+and you won't need to worry about your wallet monitoring the Bitcoin network because they all will.
+</p>
+
+<p>
+Most importantly when Lightning is mature you may not even know you're using it, 
+you'll just open your wallet and pay. Your wallet will then make a smart decision
+on how to send the BTC, whether that be on Lightning, on the Bitcoin network, 
+or on another payment system. Some Lightning wallets already do this today.
+</p>
+
+<p>
+Of course Bitcoin tech is all about freedom, so if you want to take more 
+fine-grained control over your money you'll be able to do that as well.
+</p>
+
+                </p>
+
+                <p>
+                    
+<p>
+Lightning is best thought of as Bitcoin's version of a credit card network (like Visa or Mastercard). 
+With this in mind Lightning will enable an experience that's like a credit card with much more privacy. 
+
+An important part of Lightning is that its design and development effort is going into 
+making sure that when you buy something no one else is storing your entire shopping history. 
+
+Today many companies collect our data and use it manipulate us into purchasing things we don't need 
+and then sell our data to others who really shouldn't have it. 
+
+Lightning will make it so that only the buyer and seller know each other and no other parties have access to the transaction. 
+In that way Lightning (and Bitcoin) is much more like cash than a credit card.
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="lightning-further-reading" role="tabpanel" aria-labelledby="lightning-further-reading">
+                <p>
+                    
+<p><a href="https://wiki.ion.radar.tech/tech/lightning/lightning-network">Radar.tech</a></p>
+<p><a href="https://github.com/lightningnetwork/lightning-rfc">Lightning Technical Specifications</a></p>
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+			<hr/>
+		
+			
+
+    <section id="ln-eltoo" data-spy="ln-eltoo" data-target="#ln-eltoo">
+        <h2>Lightning: Eltoo</h2>
+        <h3>Makes moving and protecting your BTC between Lightning and Bitcoin networks cheaper</h3>
+        <ul class="nav nav-tabs" id="ln-eltooTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ln-eltoo-at-a-glance-tab" data-toggle="tab" href="#ln-eltoo-at-a-glance" role="tab"
+                aria-controls="ln-eltoo-at-a-glance" aria-selected="true">At a glance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-eltoo-status-tab" data-toggle="tab" href="#ln-eltoo-status" role="tab" aria-controls="ln-eltoo-status"
+                aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-eltoo-further-reading-tab" data-toggle="tab" href="#ln-eltoo-further-reading" role="tab" aria-controls="ln-eltoo-further-reading"
+                aria-selected="false">Further Reading</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="ln-eltooTabContent">
+            <div class="tab-pane fade active show" id="ln-eltoo-at-a-glance" role="tabpanel" aria-labelledby="ln-eltoo-at-a-glance">
+                <p>
+                    
+<p>
+Go back and read about Watchtowers first. When watchtowers need to deal with stale IOUs like in the second case 
+they may need to send a lot of them to the Bitcoin network to inform it of the final IOU in the chain. 
+This process can create large transactions which are expensive. Eltoo allows for not having to do this 
+making it much cheaper to prove the chain of IOUs to the Bitcoin network.
+<p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-eltoo-status" role="tabpanel" aria-labelledby="ln-eltoo-status">
+                <p>
+                    
+
+
+                </p>
+
+                    <p>
+                    
+
+
+                </p>
+
+                <p>
+                    
+
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-eltoo-further-reading" role="tabpanel" aria-labelledby="ln-eltoo-further-reading">
+                <p>
+                    
+<a href="https://wiki.ion.radar.tech/tech/research/eltoo">Radar.tech</a>
+<a href="https://blockstream.com/eltoo.pdf">Original Paper (Blockstream)</a>
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+			<hr/>
+		
+			
+
+    <section id="ln-keysend" data-spy="ln-keysend" data-target="#ln-keysend">
+        <h2>Lightning: Keysend</h2>
+        <h3>Send Bitcoin to your friends by username</h3>
+        <ul class="nav nav-tabs" id="ln-keysendTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ln-keysend-at-a-glance-tab" data-toggle="tab" href="#ln-keysend-at-a-glance" role="tab"
+                aria-controls="ln-keysend-at-a-glance" aria-selected="true">At a glance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-keysend-status-tab" data-toggle="tab" href="#ln-keysend-status" role="tab" aria-controls="ln-keysend-status"
+                aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-keysend-further-reading-tab" data-toggle="tab" href="#ln-keysend-further-reading" role="tab" aria-controls="ln-keysend-further-reading"
+                aria-selected="false">Further Reading</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="ln-keysendTabContent">
+            <div class="tab-pane fade active show" id="ln-keysend-at-a-glance" role="tabpanel" aria-labelledby="ln-keysend-at-a-glance">
+                <p>
+                    
+<p>
+Keysend (formerly Sphinx Send) is a way to store your friend's and family's public keys and send them Bitcoin. 
+Your friend sends you an invoice, your wallet takes some data out of it and saves it to your phone with a nickname you choose.
+</p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-keysend-status" role="tabpanel" aria-labelledby="ln-keysend-status">
+                <p>
+                    
+<p>
+It's in development and has recently made its way into a piece of Lightning software called LND.
+Enthusiasts are using it to send payments to each other by name.
+</p>
+
+                </p>
+
+                    <p>
+                    
+<p>
+Once stable it'll be a commonly used contact list
+</p>
+
+                </p>
+
+                <p>
+                    
+<p>
+Rather than publicly available solutions that give your username to the entire world (like Venmo or Paypal) 
+Keysend is private and personalized so you might send Bitcoin to "Mom" but her friends will have her saved as "Carol"
+</p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-keysend-further-reading" role="tabpanel" aria-labelledby="ln-keysend-further-reading">
+                <p>
+                    
+<p><a href="https://wiki.ion.radar.tech/tech/research/sphinx-send">Radar.tech</a></p>
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+			<hr/>
+		
+			
+
+    <section id="ln-watchtowers" data-spy="ln-watchtowers" data-target="#ln-watchtowers">
+        <h2>Lightning: Watchtowers</h2>
+        <h3>Keeps your BTC secure on Lightning by monitoring the Bitcoin network</h3>
+        <ul class="nav nav-tabs" id="ln-watchtowersTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ln-watchtowers-at-a-glance-tab" data-toggle="tab" href="#ln-watchtowers-at-a-glance" role="tab"
+                aria-controls="ln-watchtowers-at-a-glance" aria-selected="true">At a glance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-watchtowers-status-tab" data-toggle="tab" href="#ln-watchtowers-status" role="tab" aria-controls="ln-watchtowers-status"
+                aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ln-watchtowers-further-reading-tab" data-toggle="tab" href="#ln-watchtowers-further-reading" role="tab" aria-controls="ln-watchtowers-further-reading"
+                aria-selected="false">Further Reading</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="ln-watchtowersTabContent">
+            <div class="tab-pane fade active show" id="ln-watchtowers-at-a-glance" role="tabpanel" aria-labelledby="ln-watchtowers-at-a-glance">
+                <p>
+                    
+"All Lightning transactions are essentially multisignature bitcoin transactions (ie. requiring a predefined number of keys to spend, rather than just one). Typically these transactions are 2-of-2 multisigs with a timelock (aka. a withdrawal delay). When you move BTC around on the Lightning Network you're essentially sharing IOUs with people. When you eventually want to turn those IOUs into BTC in your wallet you need to ""close"" your Lightning channel. There's two general ways to move BTC out of a Lightning channel:
+
+1. Holders of both keys choose to spend the BTC and agree on the final IOU in the chain of IOUs. You and the person you've sent or received money from each have one of them. Most LN transactions end this way as most parties simply obey the rules.
+
+2. The other way is when the parties disagree, in this case 1 of the 2 keys can move the BTC with a timelock (ie. a delay). One party initiates the withdrawal, then the other party can see this transaction on the Bitcoin network and respond to it, either saying it's fine (ie. they've sent the right IOU), or that it's wrong and providing proof (in the form of more recent IOUs) that they are the rightful owner of the BTC. 
+
+Watchtowers cover the second case, watching the Bitcoin network and making sure that the wrong transactions don't end up on the network sending money to the wrong people."
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-watchtowers-status" role="tabpanel" aria-labelledby="ln-watchtowers-status">
+                <p>
+                    
+Watchtowers are already in a few wallets but they're still in alpha development
+
+                </p>
+
+                    <p>
+                    
+Eventually Watchtowers will be available everywhere and making fraudulent Lightning transactions by giving the Bitcoin network old IOUs will be practically impossible.
+
+                </p>
+
+                <p>
+                    
+Currently Lightning channels are not yet easy to monitor, while the rate of fraud is low it is still feasible and does occasionally happen.
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ln-watchtowers-further-reading" role="tabpanel" aria-labelledby="ln-watchtowers-further-reading">
+                <p>
+                    
+<a href="https://wiki.ion.radar.tech/tech/research/watchtowers">Radar.tech</a>
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+			<hr/>
+		
+		</div>
+	</div>
+</main>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" 
+    integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
