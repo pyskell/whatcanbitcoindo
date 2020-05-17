@@ -1,16 +1,11 @@
 {% block description %}
-
-
     <section id="{{id}}" data-spy="{{id}}" data-target="#{{id}}">
         <h2>{{project}}{% if sub_project %}: {{sub_project}}{% else %}{% endif %}</h2>
+        <h3>{{simple_desc}}</h3>
         <ul class="nav nav-tabs" id="{{id}}Tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="{{id}}-simple-explainer-tab" data-toggle="tab" href="#{{id}}-simple-explainer" role="tab"
-                aria-controls="{{id}}-simple-explainer" aria-selected="true">Simple explainer</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="{{id}}-moderate-explainer-tab" data-toggle="tab" href="#{{id}}-moderate-explainer" role="tab"
-                aria-controls="{{id}}-moderate-explainer" aria-selected="false">Moderate explainer</a>
+                <a class="nav-link active" id="{{id}}-at-a-glance-tab" data-toggle="tab" href="#{{id}}-at-a-glance" role="tab"
+                aria-controls="{{id}}-at-a-glance" aria-selected="true">At a glance</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="{{id}}-status-tab" data-toggle="tab" href="#{{id}}-status" role="tab" aria-controls="{{id}}-status"
@@ -22,19 +17,11 @@
             </li>
         </ul>
         <div class="tab-content" id="{{id}}TabContent">
-            <div class="tab-pane fade show active" id="{{id}}-simple-explainer" role="tabpanel"
-                aria-labelledby="simple-explainer">
+            <div class="tab-pane fade active show" id="{{id}}-at-a-glance" role="tabpanel" aria-labelledby="{{id}}-at-a-glance">
                 <p>
-                    {% block simple_desc %}
+                    {% block at_a_glance %}
                     
-                    {% endblock simple_desc %}
-                </p>
-            </div>
-            <div class="tab-pane fade" id="{{id}}-moderate-explainer" role="tabpanel" aria-labelledby="{{id}}-moderate-explainer">
-                <p>
-                    {% block moderate_desc %}
-                    
-                    {% endblock moderate_desc %}
+                    {% endblock at_a_glance %}
                 </p>
             </div>
             <div class="tab-pane fade" id="{{id}}-status" role="tabpanel" aria-labelledby="{{id}}-status">

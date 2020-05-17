@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
-div .tab-content {
+div.tab-content {
     padding: 1em 2em 1em 2em;
+}
+
+div.tech-container {
+    padding-top: 2em;
 }
