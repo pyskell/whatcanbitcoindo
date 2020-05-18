@@ -1,0 +1,31 @@
+{% extends "description.html" %}
+
+{# Make sure to number your filenames if you need them to be in a specific order #}
+{# Ordering needs to start at 1 (not 0) #}
+
+{% set id="ln-macaroons"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Lightning" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="Macaroons" %} {# set to False or "" if not using #}
+{% set simple_desc="Login to your favorite websites using Lightning" %} {# Keep this short (~50 characters) #}
+
+{% block at_a_glance %}
+Macaroons allow any service (not just websites) to provide you with a bearer token that you can use to identify yourself 
+and optionally share with others. This way you can pay for a service with Lightning 
+and later use that service at your leisure by providing it with your Macaroon to prove you paid previously.
+{% endblock at_a_glance %}
+
+{% block status %}
+It's in development and has recently made its way into a piece of Lightning software called LND.
+{% endblock status %}
+
+{# {% block future %}
+
+{% endblock future %}
+
+{% block vs_alts %}
+
+{% endblock vs_alts %}
+
+{% block further_reading %}
+
+{% endblock further_reading %} #}
