@@ -1,0 +1,34 @@
+{% extends "description.html" %}
+
+{# Make sure to number your filenames if you need them to be in a specific order #}
+{# Ordering needs to start at 1 (not 0) #}
+
+{% set id="ctv"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Check Template Verify" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="" %} {# set to False or "" if not using #}
+{% set simple_desc="Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %} {# Keep this short (~50-70 characters) #}
+
+{% block at_a_glance %} {# This is the one required block #}
+CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin. 
+Taproot covers the various things that can be done in a script while CTV lays out the pathway
+to do them.
+
+One interesting side-effect of this proposal is that it lets you store transactions 
+so you can use scripts without needing direct access to your private keys.
+{% endblock at_a_glance %}
+
+{% block status %}
+CTV is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind software.
+{% endblock status %}
+
+{% block future %}
+
+{% endblock future %}
+
+{% block vs_alts %}
+
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">CTV BIP</a></p>
+{% endblock further_reading %}
