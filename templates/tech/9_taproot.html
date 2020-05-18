@@ -1,0 +1,46 @@
+{# TODO: Taproot and Taproot Script should maybe be separate #}
+
+{% extends "description.html" %}
+
+{# Make sure to number your filenames if you need them to be in a specific order #}
+{# Ordering needs to start at 1 (not 0) #}
+
+{% set id="taproot"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Taproot" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="" %} {# set to False or "" if not using #}
+{% set simple_desc="More flexible and private Bitcoin smart contracts" %} {# Keep this short (~50-70 characters) #}
+
+{% block at_a_glance %} {# This is the one required block #}
+Suppose you and 12 other business partners decide to collectively manage BTC for your startup. 
+You all want an equal (or maybe unequal) say on what to spend your money on. 
+You can store it all in one bank account and share a password, effectively trusting every person to not misbehave. 
+Alternatively you can use a solution like Taproot to make sure you have equal (or unequal) 
+say on when you can spend your BTC, effectively turning a business contract into an agreement enforced by the Bitcoin network.
+
+Taproot also improves privacy. Today if you and your business partners had such an agreement on the Bitcoin network 
+and decided to spend your BTC on a new investment then the moment you did everyone on the Bitcoin network would 
+know the wallets of every partner involved in the decision. This is bad if you don't want the world knowing 
+the operations of your business. 
+
+With Taproot (really Taproot + Schnorr + Taproot Scripts) you can make sure your transactions reveal much less or, 
+in many cases, no information about your operations.
+{% endblock at_a_glance %}
+
+{% block status %}
+Taproot is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind software.
+{% endblock status %}
+
+{% block future %}
+If Taproot is activated all sorts of new types of applications and money management will be available and enforceable by the Bitcoin network. 
+Taproot is very much a building block that may allow for types of applications no one has been able to build yet.
+{% endblock future %}
+
+{% block vs_alts %}
+Currently we depend on many centrally controlled services to manage our money and agreements around them. 
+Taproot will help us avoid or moderate the power that centralized intermediaries have over our money.
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki">Taproot BIP</a></p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki">Taproot Script BIP</a></p>
+{% endblock further_reading %}
