@@ -8,14 +8,14 @@
                 <a class="nav-link active" id="{{id}}-at-a-glance-tab" data-toggle="tab" href="#{{id}}-at-a-glance" role="tab"
                 aria-controls="{{id}}-at-a-glance" aria-selected="true">At a glance</a>
             </li>
-            {% if self.status() or self.future() or self.vs_alts() %} {# TODO: Fix this, it doesn't work #}
+            {% if self.status() != '' or self.future() != '' or self.vs_alts() != '' %} {# TODO: Fix this #}
                 <li class="nav-item">
                     <a class="nav-link" id="{{id}}-status-tab" data-toggle="tab" href="#{{id}}-status" role="tab" aria-controls="{{id}}-status"
                     aria-selected="false">Status</a>
                 </li>
             {% endif %}
             
-            {% if self.further_reading() %}
+            {% if self.further_reading() != '' %}
                 <li class="nav-item">
                     <a class="nav-link" id="{{id}}-further-reading-tab" data-toggle="tab" href="#{{id}}-further-reading" role="tab" aria-controls="{{id}}-further-reading"
                     aria-selected="false">Further Reading</a>

@@ -1,0 +1,36 @@
+{% extends "description.html" %}
+
+{# Make sure to number your filenames if you need them to be in a specific order #}
+{# Ordering needs to start at 1 (not 0) #}
+
+{% set id="ln-submarine-swaps"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Lightning" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="Submarine Swaps" %} {# set to False or "" if not using #}
+{% set simple_desc="Makes moving BTC between the main Bitcoin network and Lightning easier for users" %} {# Keep this short (~50 characters) #}
+
+{% block at_a_glance %} {# This is the one required block #}
+Submarine Swaps bundle the entire process of moving BTC between Bitcoin 
+and Lightning networks into one. This allows for seamless payments between BTC 
+on the Bitcoin network and BTC IOUs on the Lightning network.
+{% endblock at_a_glance %}
+
+{% block status %}
+Submarine Swaps are already available in mobile wallets such as Phoenix Wallet, Breez, and Muun.
+{% endblock status %}
+
+{% block future %}
+They're already here and they work.
+{% endblock future %}
+
+{% block vs_alts %}
+Without Submarine Swaps if you have BTC on the Bitcoin network and wanted to send it over Lightning 
+you would first need to make a transaction to create a Lightning channel. Then you would make a 
+second transaction sending the BTC IOU over Lightning. This process is cumbersome 
+and leads to friction in both the payment process and the UI of Lightning wallets.
+
+Now with submarine swaps the process is a single seamless step.
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<p><a href="https://wiki.ion.radar.tech/tech/research/submarine-swap">Radar.tech</a>
+{% endblock further_reading %}
