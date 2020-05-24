@@ -8,6 +8,9 @@
 {% set sub_project="Atomic Multi-path Payments" %} {# set to False or "" if not using #}
 {% set simple_desc="Allows for larger payments over Lightning" %} {# Keep this short (~50-70 characters) #}
 
+{% set details=False %}
+{% set further_reading=True %}
+
 {% block at_a_glance %} {# This is the one required block #}
 The naive way of sending money to friends on Lightning is to use BTC from a single Lightning channel. 
 However every Lightning channel has a maximum size transaction that it can support. 

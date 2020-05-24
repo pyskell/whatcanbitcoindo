@@ -8,6 +8,9 @@
 {% set sub_project="" %} {# set to False or "" if not using #}
 {% set simple_desc="Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %} {# Keep this short (~50-70 characters) #}
 
+{% set details=True %}
+{% set further_reading=True %}
+
 {% block at_a_glance %} {# This is the one required block #}
 CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin. 
 Taproot covers the various things that can be done in a script while CTV lays out the pathway
@@ -30,5 +33,5 @@ CTV is currently a Bitcoin Improvement Proposal at draft status which means it m
 {% endblock vs_alts %}
 
 {% block further_reading %}
-<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">CTV BIP</a></p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">Check Template Verify BIP</a></p>
 {% endblock further_reading %}

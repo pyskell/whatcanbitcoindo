@@ -8,6 +8,9 @@
 {% set sub_project="Onion Routing" %} {# set to False or "" if not using #}
 {% set simple_desc="Protects a Lightning transaction so no one else can see it" %} {# Keep this short (~50 characters) #}
 
+{% set details=True %}
+{% set further_reading=True %}
+
 {% block at_a_glance %} {# This is the one required block #}
 Every Lightning IOU moves through multiple nodes (aka servers) on its way to its final recipient. 
 For each node in its path another layer of encryption is added. 

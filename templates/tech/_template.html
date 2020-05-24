@@ -8,6 +8,14 @@
 {% set sub_project="" %} {# set to False or "" if not using #}
 {% set simple_desc="" %} {# Keep this short (~50-70 characters) #}
 
+{# Sections
+    set details=True if including status, future, or vs_alts.
+    set further_reading=True if including further_reading links.
+ #}
+ 
+{% set details=True %}
+{% set further_reading=True %}
+
 {% block at_a_glance %} {# This is the one required block #}
 
 {% endblock at_a_glance %}

@@ -5,6 +5,9 @@
 {% set sub_project="Watchtowers" %} {# set to False or "" if not using #}
 {% set simple_desc="Keeps your BTC secure on Lightning by monitoring the Bitcoin network" %} {# Keep this short (~50 characters) #}
 
+{% set details=True %}
+{% set further_reading=True %}
+
 {% block at_a_glance %}
 "All Lightning transactions are essentially multisignature bitcoin transactions (ie. requiring a predefined number of keys to spend, rather than just one). Typically these transactions are 2-of-2 multisigs with a timelock (aka. a withdrawal delay). When you move BTC around on the Lightning Network you're essentially sharing IOUs with people. When you eventually want to turn those IOUs into BTC in your wallet you need to ""close"" your Lightning channel. There's two general ways to move BTC out of a Lightning channel:
 
