@@ -3,25 +3,34 @@
 {# Make sure to number your filenames if you need them to be in a specific order #}
 {# Ordering needs to start at 1 (not 0) #}
 
-{% set id="ctv"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set id="ctv"%}
+{# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
 {% set project="Check Template Verify" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
 {% set sub_project="" %} {# set to False or "" if not using #}
-{% set simple_desc="Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %} {# Keep this short (~50-70 characters) #}
+{% set simple_desc="Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %}
+{# Keep this short (~50-70 characters) #}
 
 {% set details=True %}
 {% set further_reading=True %}
 
 {% block at_a_glance %} {# This is the one required block #}
-CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin. 
-Taproot covers the various things that can be done in a script while CTV lays out the pathway
-to do them.
+<p>
+    CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin.
+    Taproot covers the various things that can be done in a script while CTV lays out the pathway
+    to do them.
+</p>
 
-One interesting side-effect of this proposal is that it lets you store transactions 
-so you can use scripts without needing direct access to your private keys.
+<p>
+    One interesting side-effect of this proposal is that it lets you store transactions
+    so you can use scripts without needing direct access to your private keys.
+</p>
 {% endblock at_a_glance %}
 
 {% block status %}
-CTV is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind software.
+<p>
+    CTV is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind
+    software.
+</p>
 {% endblock status %}
 
 {% block future %}

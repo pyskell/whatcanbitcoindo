@@ -12,28 +12,36 @@
 {% set further_reading=True %}
 
 {% block at_a_glance %} {# This is the one required block #}
-Essentially the way Bitcoin addresses and signatures (the things you use to authorize BTC transactions) work are not 
-as efficient or private as they could be. Schnorr is a previously patented type of cryptographic (ie. electronic) signature 
-that improves the privacy and cost of Bitcoin transactions; making them overall cheaper. 
-Schnorr signatures are compiled from 1 or many keys and if they're used for a smart contract that includes 
-multiple parties then it's impossible for any outsider to know what the smart contract did or could have done which means 
-agreements between you and others are kept entirely private, looking just like any other transaction.
+<p>
+    Essentially the way Bitcoin addresses and signatures (the things you use to authorize BTC transactions) work are not 
+    as efficient or private as they could be. Schnorr is a previously patented type of cryptographic (ie. electronic) signature 
+    that improves the privacy and cost of Bitcoin transactions; making them overall cheaper. 
+    Schnorr signatures are compiled from 1 or many keys and if they're used for a smart contract that includes 
+    multiple parties then it's impossible for any outsider to know what the smart contract did or could have done which means 
+    agreements between you and others are kept entirely private, looking just like any other transaction.
+</p>
 {% endblock at_a_glance %}
 
 {% block status %}
-Schnorr is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind software.
+<p>
+    Schnorr is currently a Bitcoin Improvement Proposal at draft status which means it may make its way into the bitcoind software.
+</p>
 {% endblock status %}
 
 {% block future %}
-If Schnorr is activate on the network no one will be required to use it, 
-but if they choose to then it will provide a more private and cheaper Bitcoin transaction experience. 
-Long term it will help keep the cost to run the Bitcoin network software (aka. bitcoind) low meaning 
-as many people as possible across the world will be able to be a part of the Bitcoin network 
-while preserving the properties of the Bitcoin network.
+<p>
+    If Schnorr is activate on the network no one will be required to use it, 
+    but if they choose to then it will provide a more private and cheaper Bitcoin transaction experience. 
+    Long term it will help keep the cost to run the Bitcoin network software (aka. bitcoind) low meaning 
+    as many people as possible across the world will be able to be a part of the Bitcoin network 
+    while preserving the properties of the Bitcoin network.
+</p>
 {% endblock future %}
 
 {% block vs_alts %}
-Current transactions are generally bigger (ie. more expensive) and less private than Schnorr.
+<p>
+    Current transactions are generally bigger (ie. more expensive) and less private than Schnorr.
+</p>
 {% endblock vs_alts %}
 
 {% block further_reading %}

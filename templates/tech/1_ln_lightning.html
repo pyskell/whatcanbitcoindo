@@ -1,6 +1,7 @@
 {% extends "description.html" %}
 
-{% set id="lightning"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set id="lightning"%}
+{# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
 {% set project="Lightning" %}
 {% set sub_project=False %}
 {% set simple_desc="A way to send Bitcoin in seconds between friends and merchants"%}
@@ -10,59 +11,69 @@
 
 {% block at_a_glance %}
 <p>
-Essentially Lightning is a faster type of Bitcoin transaction, that rather than being sent directly to the Bitcoin network
-is sent directly to friends, family, and merchants. Later they may choose to move the BTC they received to the Bitcoin network.
+    Essentially Lightning is a faster type of Bitcoin transaction, that rather than being sent directly to the Bitcoin
+    network
+    is sent directly to friends, family, and merchants. Later they may choose to move the BTC they received to the
+    Bitcoin network.
 </p>
 
 <p>
-When Lightning is mature it will be usable for reasonably sized transactions and purchases between friends and merchants
-while the Bitcoin network will remain the preferred method for large transactions.
+    When Lightning is mature it will be usable for reasonably sized transactions and purchases between friends and
+    merchants
+    while the Bitcoin network will remain the preferred method for large transactions.
 </p>
 {% endblock at_a_glance %}
 
 {% block status %}
 <p>
-Lightning is in alpha to beta state which means it works most of the time but may have bugs.
-Lightning wallets continuously improve in security and quality. The leading Lightning wallets are generally simple and easy to use.
+    Lightning is in alpha to beta state which means it works most of the time but may have bugs.
+    Lightning wallets continuously improve in security and quality. The leading Lightning wallets are generally simple
+    and easy to use.
 </p>
 
 <p>
-At the moment you should only use small amounts of BTC on Lightning due to risks related to the early nature of the Lightning ecosystem.
+    At the moment you should only use small amounts of BTC on Lightning due to risks related to the early nature of the
+    Lightning ecosystem.
 </p>
 {% endblock status %}
 
 {% block future %}
 <p>
-When Lightning is mature it will be usable for most reasonably sized transactions between friends and merchants 
-and you won't need to worry about your wallet monitoring the Bitcoin network because they all will.
+    When Lightning is mature it will be usable for most reasonably sized transactions between friends and merchants
+    and you won't need to worry about your wallet monitoring the Bitcoin network because they all will.
 </p>
 
 <p>
-Most importantly when Lightning is mature you may not even know you're using it, 
-you'll just open your wallet and pay. Your wallet will then make a smart decision
-on how to send the BTC, whether that be on Lightning, on the Bitcoin network, 
-or on another payment system. Some Lightning wallets already do this today.
+    Most importantly when Lightning is mature you may not even know you're using it,
+    you'll just open your wallet and pay. Your wallet will then make a smart decision
+    on how to send the BTC, whether that be on Lightning, on the Bitcoin network,
+    or on another payment system. Some Lightning wallets already do this today.
 </p>
 
 <p>
-Of course Bitcoin tech is all about freedom, so if you want to take more 
-fine-grained control over your money you'll be able to do that as well.
+    Of course Bitcoin tech is all about freedom, so if you want to take more
+    fine-grained control over your money you'll be able to do that as well.
 </p>
 {% endblock future %}
 
 {% block vs_alts %}
 <p>
-Lightning is best thought of as Bitcoin's version of a credit card network (like Visa or Mastercard). 
-With this in mind Lightning will enable an experience that's like a credit card with much more privacy. 
-
-An important part of Lightning is that its design and development effort is going into 
-making sure that when you buy something no one else is storing your entire shopping history. 
-
-Today many companies collect our data and use it manipulate us into purchasing things we don't need 
-and then sell our data to others who really shouldn't have it. 
-
-Lightning will make it so that only the buyer and seller know each other and no other parties have access to the transaction. 
-In that way Lightning (and Bitcoin) is much more like cash than a credit card.
+    Lightning is best thought of as Bitcoin's version of a credit card network (like Visa or Mastercard).
+    With this in mind Lightning will enable an experience that's like a credit card with much more privacy.
+</p>
+<p>
+    An important part of Lightning is that its design and development effort is going into
+    making sure that when you buy something no one else is storing your entire shopping history.
+</p>
+<p>
+    Today many companies collect our data and use it manipulate us into purchasing things we don't need
+    and then sell our data to others who really shouldn't have it.
+</p>
+<p>
+    Lightning will make it so that only the buyer and seller know each other and no other parties have access to the
+    transaction.
+    In that way Lightning (and Bitcoin) is much more like cash than a credit card.
+</p>
 {% endblock vs_alts %}
 
 {% block further_reading %}

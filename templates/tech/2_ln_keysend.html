@@ -1,39 +1,43 @@
 {% extends "description.html" %}
 
-{% set id="ln-keysend"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set id="ln-keysend"%}
+{# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
 {% set project="Lightning" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
 {% set sub_project="Keysend" %} {# set to False or "" if not using #}
-{% set simple_desc="Send Bitcoin to your friends by username" %} {# Keep this short (~70 characters); don't end with a period #}
+{% set simple_desc="Send Bitcoin to your friends by username" %}
+{# Keep this short (~70 characters); don't end with a period #}
 
 {% set details=True %}
 {% set further_reading=True %}
 
 {% block at_a_glance %}
 <p>
-Keysend (formerly Sphinx Send) is a way to store your friend's and family's public keys and send them Bitcoin. 
-Your friend sends you an invoice, your wallet takes some data out of it and saves it to your phone with a nickname you choose. 
-This is akin to saving your friend's phone number in your phone, except now you're saving their Lightning "address".
+    Keysend (formerly Sphinx Send) is a way to store your friend's and family's public keys and send them Bitcoin.
+    Your friend sends you an invoice, your wallet takes some data out of it and saves it to your phone with a nickname
+    you choose.
+    This is akin to saving your friend's phone number in your phone, except now you're saving their Lightning "address".
 </p>
 {% endblock at_a_glance %}
 
 {% block status %}
 <p>
-It's in development and has recently made its way into a piece of Lightning software called LND.
-Lightning enthusiasts are using it to send payments to each other.
+    It's in development and has recently made its way into a piece of Lightning software called LND.
+    Lightning enthusiasts are using it to send payments to each other.
 </p>
 {% endblock status %}
 
 {% block future %}
 <p>
-Once stable it'll be a commonly used and private form of contact list
+    Once stable it'll be a commonly used and private form of contact list
 </p>
 {% endblock future %}
 
 {% block vs_alts %}
 <p>
-Rather than publicly available solutions that give your username to the entire world (like Venmo or Paypal) 
-Keysend is private and personalized so you might send Bitcoin to "Mom" but her friends will have her saved as "Carol" 
-and no one else will have her private contact info.
+    Rather than publicly available solutions that give your username to the entire world (like Venmo or Paypal)
+    Keysend is private and personalized so you might send Bitcoin to "Mom" but her friends will have her saved as
+    "Carol"
+    and no one else will have her private contact info.
 </p>
 {% endblock vs_alts %}
 
