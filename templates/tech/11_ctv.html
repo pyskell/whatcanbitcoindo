@@ -7,7 +7,7 @@
 {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
 {% set project="Check Template Verify" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
 {% set sub_project="" %} {# set to False or "" if not using #}
-{% set simple_desc="Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %}
+{% set simple_desc="A building block for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels" %}
 {# Keep this short (~50-70 characters) #}
 
 {% set details=True %}
@@ -15,14 +15,16 @@
 
 {% block at_a_glance %} {# This is the one required block #}
 <p>
-    CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin.
-    Taproot covers the various things that can be done in a script while CTV lays out the pathway
-    to do them.
-</p>
+    When you spend on Bitcoin you send money and another address receives money at the same exact time.
+    This is great for simple value transfers but falls apart when you need to pay a lot of addresses at once as fees become high and block space is limited.
 
-<p>
-    One interesting side-effect of this proposal is that it lets you store transactions
-    so you can use scripts without needing direct access to your private keys.
+    Imagine a company has 10,000 BTC that they need to send to 100,000 addresses, and they need to do it all today.
+    This is a process that's impossible in many payment systems today and only a few highly centralized custom-built systems can do it.
+    CTV brings this process to Bitcoin by allowing one transaction to be guaranteed 
+    for many recipients without immediately recording who the recipients are on the Bitcoin network.
+
+    By separating the sending and receiving of a payment CTV allows for all sorts of bigger and more flexible transactions.
+    In many ways a CTV is an IOU that is guaranteed by the Bitcoin network rather than a non-guaranteed IOU by the person or entity who gave you the IOU.
 </p>
 {% endblock at_a_glance %}
 
@@ -38,9 +40,14 @@
 {% endblock future %}
 
 {% block vs_alts %}
-
+<p>
+    Presently many payment systems solve the problem of large transaction sizes by increasing raw throughput,
+    issuing IOUs, and settling the transaction later. Both of these approaches, while effective, unfortunately create
+    highly centralized systems that regularly exclude people and refuse to make good on their debts.
+</p>
 {% endblock vs_alts %}
 
 {% block further_reading %}
+<p><a href="https://utxos.org/">utxos.org</a></p>
 <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">Check Template Verify BIP</a></p>
 {% endblock further_reading %}
