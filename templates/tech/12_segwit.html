@@ -1,0 +1,53 @@
+{% extends "description.html" %}
+
+{# Make sure to number your filenames if you need them to be in a specific order #}
+{# Ordering needs to start at 1 (not 0) #}
+
+{% set id="segwit"%} {# id must be unique and follow the rules for ids in css https://www.w3.org/TR/CSS21/syndata.html#characters #}
+{% set project="Segwit" %} {# Use proper-case (ex. Bitcoin, not bitcoin) #}
+{% set sub_project="" %} {# set to False or "" if not using #}
+{% set simple_desc="Effectively doubles the transaction throughput of the Bitcoin network and enables the Lightning network" %} {# Keep this short (~50-70 characters) #}
+
+{# Sections
+    set details=True if including status, future, or vs_alts.
+    set further_reading=True if including further_reading links.
+ #}
+ 
+{% set details=True %}
+{% set further_reading=True %}
+
+{% block at_a_glance %} {# This is the one required block #}
+<p>
+    Segregated Witness (aka. Segwit) essentially splits up transactions so only the data necessary for sending a transaction is in the part of a block
+    that every node is guaranteed to read and understand. The data used for making sure the transaction is authorized (ie. the witness) is moved into a separate
+    structure.
+
+    The two biggest effects of this are:
+
+    <ol>
+        <li>Blocks can effectively be twice as large without causing a network split 
+        (ie. those who disagree with Segwit do not need to run a Segwit node or accept Segwit transactions)</li>
+
+        <li>This process also fixes "transaction malleability" which essentially means that it's a lot safer to build many
+        layer 2 networks on top of Bitcoin. Prior to this fix it was much harder because people could produce two valid transactions
+        for a layer 2 network that both involved the same BTC. If this wasn't fixed people would be able to double spend their BTC on networks like Lightning.</li>
+    </ol>
+</p>
+{% endblock at_a_glance %}
+
+{% block status %}
+<p>Segwit was activated on the Bitcoin network on August 24, 2017</p>
+{% endblock status %}
+
+{% block future %}
+<p></p>
+{% endblock future %}
+
+{% block vs_alts %}
+<p></p>
+{% endblock vs_alts %}
+
+{% block further_reading %}
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">Segregated Witness</a></p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki">BIP-148 (Mandatory activation of segwit deployment)</a></p>
+{% endblock further_reading %}
