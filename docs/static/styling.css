@@ -1,5 +1,5 @@
 body { 
-    padding-top: 70px;
+    margin-top: 70px;
 }
 
 div.tab-content {
@@ -8,4 +8,9 @@ div.tab-content {
 
 div.tech-container {
     padding-top: 2em;
+}
+
+section {
+    padding-top: 80px;
+    margin-top: -70px;
 }

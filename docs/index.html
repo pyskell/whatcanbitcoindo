@@ -32,12 +32,12 @@
 			<a class="nav-link dropdown-toggle" href="#" id="techdropdown" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false">Tech</a>
 			<div class="dropdown-menu" aria-labelledby="techdropdown">
-			<a class="dropdown-item" href="#segwit">Segwit</a>
 			<a class="dropdown-item" href="#lightning">Lightning</a>
 			<a class="dropdown-item" href="#schnorr">Schnorr</a>
 			<a class="dropdown-item" href="#taproot">Taproot</a>
 			<a class="dropdown-item" href="#miniscript">Miniscript</a>
 			<a class="dropdown-item" href="#ctv">Check Template Verify</a>
+			<a class="dropdown-item" href="#segwit">Segwit</a>
 			</div>
 		</li>
 		</ul>
@@ -46,7 +46,7 @@
 
 <main role="main" class="container">
 	<div class="alert alert-primary" role="alert">
-		This site is in very early development, it's not ready yet, and I'm not happy with it. 
+		This site is in early development. 
 		If you want to contribute anything, design, corrections, proof reading, editing, 
 		translations, then please make a pull request to <a href="https://github.com/pyskell/bites/">the repository</a>.
 	</div>
@@ -72,9 +72,6 @@
 		Please also keep in mind that this is tech explained simply, as such it will gloss over specific technical details.
 		If you're excited by these things and want more in depth and accurate information then please refer to the "Further reading" tabs.
 		</p>
-
-		
-
 		<div class="tech-container">
 		
 			
@@ -309,12 +306,15 @@
 <p>
     There's two general ways to move BTC out of a Lightning channel:
 </p>
-<p>
-    1. Holders of both keys choose to spend the BTC and agree on the final IOU in the chain of IOUs. You and the person you've sent or received money from each have one of them. Most LN transactions end this way as most parties simply obey the rules.
-</p>
-<p>
-    2. The other way is when the parties disagree, in this case 1 of the 2 keys can move the BTC with a timelock (ie. a delay). One party initiates the withdrawal, then the other party can see this transaction on the Bitcoin network and respond to it, either saying it's fine (ie. they've sent the right IOU), or that it's wrong and providing proof (in the form of more recent IOUs) that they are the rightful owner of the BTC. 
-</p>
+    <ol>
+    <li>Holders of both keys choose to spend the BTC and agree on the final IOU in the chain of IOUs. 
+    You and the person you've sent or received money from each have one of them. Most LN transactions end this way as most parties simply obey the rules.</li>
+
+    <li>The other way is when the parties disagree, in this case 1 of the 2 keys can move the BTC with a timelock (ie. a delay). 
+    One party initiates the withdrawal, then the other party can see this transaction on the Bitcoin network and respond to it, 
+    either saying it's fine (ie. they've sent the right IOU), or that it's wrong and providing proof (in the form of more recent IOUs)
+    that they are the rightful owner of the BTC.</li>
+    </ol>
 <p>
     Watchtowers cover the second case, watching the Bitcoin network and 
     making sure that the wrong transactions don't end up on the network sending money to the wrong people.
@@ -967,7 +967,7 @@ making it much cheaper to prove the chain of IOUs to the Bitcoin network.
 
     <section id="ctv" data-spy="ctv" data-target="#ctv">
         <h2>Check Template Verify</h2>
-        <h3>Allows for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels</h3>
+        <h3>A building block for cost-efficient management of large amounts of transactions such as CoinJoins and Lightning channels</h3>
         <ul class="nav nav-tabs" id="ctvTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="ctv-at-a-glance-tab" data-toggle="tab" href="#ctv-at-a-glance" role="tab"
@@ -992,14 +992,16 @@ making it much cheaper to prove the chain of IOUs to the Bitcoin network.
                 <p>
                      
 <p>
-    CTV is in many ways like Taproot, a more flexible and private way to use Bitcoin.
-    Taproot covers the various things that can be done in a script while CTV lays out the pathway
-    to do them.
-</p>
+    When you spend on Bitcoin you send money and another address receives money at the same exact time.
+    This is great for simple value transfers but falls apart when you need to pay a lot of addresses at once as fees become high and block space is limited.
 
-<p>
-    One interesting side-effect of this proposal is that it lets you store transactions
-    so you can use scripts without needing direct access to your private keys.
+    Imagine a company has 10,000 BTC that they need to send to 100,000 addresses, and they need to do it all today.
+    This is a process that's impossible in many payment systems today and only a few highly centralized custom-built systems can do it.
+    CTV brings this process to Bitcoin by allowing one transaction to be guaranteed 
+    for many recipients without immediately recording who the recipients are on the Bitcoin network.
+
+    By separating the sending and receiving of a payment CTV allows for all sorts of bigger and more flexible transactions.
+    In many ways a CTV is an IOU that is guaranteed by the Bitcoin network rather than a non-guaranteed IOU by the person or entity who gave you the IOU.
 </p>
 
                 </p>
@@ -1022,14 +1024,98 @@ making it much cheaper to prove the chain of IOUs to the Bitcoin network.
 
                 <p>
                     
-
+<p>
+    Presently many payment systems solve the problem of large transaction sizes by increasing raw throughput,
+    issuing IOUs, and settling the transaction later. Both of these approaches, while effective, unfortunately create
+    highly centralized systems that regularly exclude people and refuse to make good on their debts.
+</p>
 
                 </p>
             </div>
             <div class="tab-pane fade" id="ctv-further-reading" role="tabpanel" aria-labelledby="ctv-further-reading">
                 <p>
                     
+<p><a href="https://utxos.org/">utxos.org</a></p>
 <p><a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">Check Template Verify BIP</a></p>
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+			<hr/>
+		
+			
+
+    <section id="segwit" data-spy="segwit" data-target="#segwit">
+        <h2>Segwit</h2>
+        <h3>Effectively doubles the transaction throughput of the Bitcoin network and enables the Lightning network</h3>
+        <ul class="nav nav-tabs" id="segwitTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="segwit-at-a-glance-tab" data-toggle="tab" href="#segwit-at-a-glance" role="tab"
+                aria-controls="segwit-at-a-glance" aria-selected="true">At a glance</a>
+            </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" id="segwit-details-tab" data-toggle="tab" href="#segwit-details" role="tab" aria-controls="segwit-details"
+                    aria-selected="false">Details</a>
+                </li>
+            
+            
+            
+                <li class="nav-item">
+                    <a class="nav-link" id="segwit-further-reading-tab" data-toggle="tab" href="#segwit-further-reading" role="tab" aria-controls="segwit-further-reading"
+                    aria-selected="false">Further Reading</a>
+                </li>
+            
+        </ul>
+        <div class="tab-content" id="segwitTabContent">
+            <div class="tab-pane fade active show" id="segwit-at-a-glance" role="tabpanel" aria-labelledby="segwit-at-a-glance">
+                <p>
+                     
+<p>
+    Segregated Witness (aka. Segwit) essentially splits up transactions so only the data necessary for sending a transaction is in the part of a block
+    that every node is guaranteed to read and understand. The data used for making sure the transaction is authorized (ie. the witness) is moved into a separate
+    structure.
+
+    The two biggest effects of this are:
+
+    <ol>
+        <li>Blocks can effectively be twice as large without causing a network split 
+        (ie. those who disagree with Segwit do not need to run a Segwit node or accept Segwit transactions)</li>
+
+        <li>This process also fixes "transaction malleability" which essentially means that it's a lot safer to build many
+        layer 2 networks on top of Bitcoin. Prior to this fix it was much harder because people could produce two valid transactions
+        for a layer 2 network that both involved the same BTC. If this wasn't fixed people would be able to double spend their BTC on networks like Lightning.</li>
+    </ol>
+</p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="segwit-details" role="tabpanel" aria-labelledby="segwit-details">
+                <p>
+                    
+<p>Segwit was activated on the Bitcoin network on August 24, 2017</p>
+
+                </p>
+
+                    <p>
+                    
+<p></p>
+
+                </p>
+
+                <p>
+                    
+<p></p>
+
+                </p>
+            </div>
+            <div class="tab-pane fade" id="segwit-further-reading" role="tabpanel" aria-labelledby="segwit-further-reading">
+                <p>
+                    
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">Segregated Witness</a></p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki">BIP-148 (Mandatory activation of segwit deployment)</a></p>
 
                 </p>
             </div>
