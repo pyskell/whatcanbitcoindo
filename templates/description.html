@@ -1,7 +1,7 @@
 {% block description %}
 {# TODO: Consider adding a "difficulty" indicator, has pros and cons #}
     <section id="{{id}}" data-spy="{{id}}" data-target="#{{id}}">
-        <h2>{{project}}{% if sub_project %}: {{sub_project}}{% endif %}</h2>
+        <h2><b>{{project}}</b>{% if sub_project %}<b>:</b> {{sub_project}}{% endif %}</h2>
         <h3>{{simple_desc}}</h3>
         <ul class="nav nav-tabs" id="{{id}}Tab" role="tablist">
             <li class="nav-item">
