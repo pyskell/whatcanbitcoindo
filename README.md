@@ -1,14 +1,17 @@
-This is the source code for Bitcoin tech explained simply. If you want to see the website go to: [https://pyskell.github.io/bites/](https://pyskell.github.io/bites/)
+This is the source code for [https://whatcanbitcoindo.com](). Making contributions is easy and very welcome!
 
-This page is intended for newcomers to be able to grasp what is going on in the Bitcoin ecosystem without
-having to dive into highly technical documentation. As such the writing style here may differ from other more accurate and descriptive sources.
+What Can Bitcoin Do? is intended for enthusiasts to get an overview 
+of the Bitcoin ecosystem and technical improvements without
+having to dive into highly technical documentation. As such 
+the writing style here may differ from other more accurate and descriptive sources.
 
 Namely, we should:
 - Add more languages.
-- Keep our target audience in mind. This is not an intro-to-bitcoin website, there are scores of those. 
+- Keep our target audience in mind. 
+This is not an intro-to-bitcoin website, there are scores of those. 
 Nor is this a website for advanced technical understanding of how the projects featured here work.
-Our target audience are new enthusiasts who have some knowledge of cryptocurrencies and may 
-be mislead by marketing and promises that cannot be delivered on.
+Our target audience is new enthusiasts who have some knowledge of cryptocurrencies and may 
+be mislead by marketing and promises that falsely disparage Bitcoin.
 - Focus more on user-facing effects, in many cases these may be second order effects of a technology rather than its base purpose.
 - Aim to use as simple language as possible and avoid idioms so that even non-native English speakers can understand Bitcoin.
 - Want to avoid analogies *unless* they are close to 1-to-1 comparisons and broadly understood.
@@ -17,4 +20,11 @@ be mislead by marketing and promises that cannot be delivered on.
 - There should be no tech on this website that doesn't at least have a working proof of concept.
 - If there are major blockers to the realization of the tech then it needs to be mentioned int he future section.
 
-Run `./freeze.py` to get a static site in the `build/` directory.
+# Live Preview
+```
+pip install -r requirements.txt
+flask run
+```
+
+# Build Static Site
+Run `./freeze.py` to get a static site in the `docs/` directory.
